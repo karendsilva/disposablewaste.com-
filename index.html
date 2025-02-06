@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Smart Waste Management & Recycling System</h1>
+
+        <div class="input-section">
+            <label for="waste-type">Choose a type of waste:</label>
+            <select id="waste-type">
+                <option value="plastic">Plastic</option>
+                <option value="paper">Paper</option>
+                <option value="food-scraps">Food Scraps</option>
+                <option value="glass">Glass</option>
+                <option value="metal">Metal</option>
+            </select>
+            <button onclick="sortWaste()">Sort Waste</button>
+        </div>
+
+        <div class="results">
+            <h2>Sorting Result:</h2>
+            <p id="result-message">Please select a waste type to start sorting.</p>
+        </div>
+
+        <div class="feedback">
+            <h2>Recycling Feedback:</h2>
+            <p>Recycled Waste: <span id="recycled">0 kg</span></p>
+            <p>Landfill Waste: <span id="landfill">0 kg</span></p>
+            <p>Composted Waste: <span id="composted">0 kg</span></p>
+        </div>
+
+        <div class="chart">
+            <canvas id="wasteChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
